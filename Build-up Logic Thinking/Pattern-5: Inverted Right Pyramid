@@ -1,0 +1,24 @@
+Problem statement
+Sam is planting trees on the upper half region (separated by the left diagonal) of the square shared field.
+
+For every value of ‘N’, print the field if the trees are represented by ‘*’.
+
+Example:
+Input: ‘N’ = 3
+
+Output: 
+* * *
+* *
+*
+
+Solution:
+def seeding(n: int) -> None:
+    # Write your solution here.
+    for i in range(n, 0, -1):
+        print("* " * i)
+
+#using nested loops:
+for i in range(n, 0, -1):        
+        for j in range(i):           
+            print("*", end=" ")
+        print() 
