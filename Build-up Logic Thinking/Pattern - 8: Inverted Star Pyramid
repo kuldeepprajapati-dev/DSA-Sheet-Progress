@@ -1,0 +1,32 @@
+Example:
+Input: ‘n’ = 3
+
+Output: 
+
+*****
+ ***
+  *
+
+Solution:
+
+for i in range(n):
+        spaces = i          # spaces increase by 1 each line
+        stars = 2 * (n - i) - 1  # stars decrease by 2 each line
+        print(' ' * spaces + '*' * stars)
+
+with nested loops:
+
+for i in range(n):
+        # Print leading spaces
+        for _ in range(i):
+            print(' ', end='')
+        
+        # Calculate number of stars for the line
+        stars = 2 * (n - i) - 1
+        
+        # Print stars
+        for _ in range(stars):
+            print('*', end='')
+        
+        # Move to the next line
+        print()
